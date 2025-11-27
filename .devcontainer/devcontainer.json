@@ -5,6 +5,7 @@
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
 			"installYarnUsingApt": true,
+			"npmVersion": "9.8.1",
 			"version": "20",
 			"pnpmVersion": "latest",
 			"nvmVersion": "latest"
