@@ -1,0 +1,45 @@
+{
+	"name": "Sprout (Node.js & TypeScript) - decapCMS",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": true,
+			"version": "20",
+			"pnpmVersion": "latest",
+			"nvmVersion": "latest"
+		},
+		"ghcr.io/jayree/devcontainer-features/npm-registry:1": {
+			"registry": "@SCOPE:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=${localEnv:GITHUB_TOKEN}"
+		},
+		"ghcr.io/devcontainers-extra/features/npm-package:1": {
+			"package": "typescript",
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/npm-packages:1": {
+			"packages": "eslint@9.20.1,nodemon,prettier@3.5.2"
+		}
+	},
+	"onCreateCommand": [
+		".devcontainer/setup.sh"
+	],
+	"postAttachCommand": "code --install-extension /workspaces/sprout-user/sprout-0.0.1.vsix",
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"ahubanov-eth2/Sprout-Course-Collection": {
+					"permissions": "read-all" 
+				},
+				"decaporg/decap-cms": {
+					"permissions": "write-all" 
+				}
+			}
+		}
+	},
+	"containerEnv": {
+		"DYNAMIC_REPO_PATH": "decaporg/decap-cms",
+		"COMMIT": "88382dc100924b28adaf545879a5845654e594f1",
+		"PARENT_COMMIT": "5d33d098db7917a8e416f4a634db5aaf13f60cbb",
+		"SPROUT_COURSE_NAME": "course2"
+	}
+}
