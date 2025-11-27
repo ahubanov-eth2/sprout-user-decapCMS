@@ -24,7 +24,7 @@
 	"onCreateCommand": [
 		".devcontainer/setup.sh"
 	],
-	"postAttachCommand": "code --install-extension /workspaces/sprout-user/sprout-0.0.1.vsix",
+	"postAttachCommand": "code --install-extension /workspaces/sprout-user-decapCMS/sprout-0.0.1.vsix",
 	"customizations": {
 		"codespaces": {
 			"repositories": {
