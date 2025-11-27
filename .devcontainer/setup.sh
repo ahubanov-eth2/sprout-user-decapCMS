@@ -13,5 +13,3 @@ fi
 
 cd data/project-repository
 git checkout ${PARENT_COMMIT}
-
-npm install --ignore-scripts 
