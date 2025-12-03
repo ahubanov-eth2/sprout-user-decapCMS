@@ -35,7 +35,12 @@
 					"permissions": "write-all" 
 				}
 			}
-		}
+		},
+		"vscode": {
+            "extensions": [
+                "ritwickdey.LiveServer" 
+            ]
+        }
 	},
 	"containerEnv": {
 		"DYNAMIC_REPO_PATH": "decaporg/decap-cms",
