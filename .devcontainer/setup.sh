@@ -13,16 +13,3 @@ fi
 
 cd data/project-repository
 git checkout ${PARENT_COMMIT}
-
-yarn install
-export NODE_OPTIONS=--openssl-legacy-providerexport NODE_OPTIONS=--openssl-legacy-provider
-yarn lerna run build --scope netlify-cms-app --include-dependencies
-unset NODE_OPTIONS
-
-sudo bash -c 'cat << EOF > /usr/local/bin/sprout-run
-#!/bin/bash
-# Open the test file in the current VS Code window (-r = reuse window)
-code -r /workspaces/sprout-user-decapCMS/data/project-repository/dev-test/index.html
-EOF'
-
-sudo chmod +x /usr/local/bin/sprout-run
