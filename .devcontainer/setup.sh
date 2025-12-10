@@ -15,6 +15,6 @@ cd data/project-repository
 git checkout ${PARENT_COMMIT}
 
 yarn install
-export NODE_OPTIONS=--openssl-legacy-providerexport NODE_OPTIONS=--openssl-legacy-provider
+export NODE_OPTIONS=--openssl-legacy-provider
 yarn lerna run build --scope netlify-cms-app --include-dependencies
 unset NODE_OPTIONS
