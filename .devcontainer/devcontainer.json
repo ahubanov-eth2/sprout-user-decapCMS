@@ -32,7 +32,7 @@
 					"permissions": "read-all" 
 				},
 				"decaporg/decap-cms": {
-					"permissions": "write-all" 
+					"permissions": "read-all" 
 				}
 			}
 		},
